@@ -24,10 +24,9 @@ class App extends Component {
         return;
       }
       e.innerText = string.substring(0, i);
-      let rand = 25;
       setTimeout(() => {
         deleter(i);
-      }, rand);
+      }, 50);
     };
     deleter(string.length + 1);
   };
@@ -38,14 +37,13 @@ class App extends Component {
         e.value = string;
         setTimeout(() => {
           this.deleteLine(e, string);
-        }, 1200);
+        }, 1000);
         return;
       }
       e.innerText = string.substring(0, i);
-      let rand = Math.floor(Math.random() * 50 + 1);
       setTimeout(() => {
         writer(i);
-      }, rand);
+      }, 50);
     };
     writer(0);
   };
