@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
   state = {examples: ["One", "Two", "Three"], description: 0}
@@ -9,13 +7,6 @@ class App extends Component {
     const subheader = document.getElementById('example')
     let text = 'Lets connect...';
     this.type(text, subheader);
-  }
-
-  addNum = () => {
-    const {description} = this.state
-    this.setState({
-      description: this.state.description++
-    })
   }
 
   deleteLine = (e, string) => {
@@ -61,13 +52,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <p id='example'></p>
-      </div>
-
+      <p id='example'></p>
     );
   }
 }
+
+
 
 export default App;
 
